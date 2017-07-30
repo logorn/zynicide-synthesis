@@ -51,7 +51,7 @@ ROOT_URLCONF = 'zynicide.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['static/apps'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
