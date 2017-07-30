@@ -1,0 +1,4 @@
+Fabric==1.11.1
+factory_boy==2.8.0
+flake8==2.5.4
+mock==2.0.0
