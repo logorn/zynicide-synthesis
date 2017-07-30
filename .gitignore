@@ -1,5 +1,5 @@
 # Zynicide Synthesis
-zynicide/settings/secret.py
+settings/secret.py
 db.sqlite3
 node_modules
 

@@ -1,5 +1,5 @@
 import os
-environment = os.environ.get('ESCAPES_ARTIST_SETTINGS', 'development')
+environment = os.environ.get('ZYNICIDE_SETTINGS', 'development')
 
 from .common import *  # NOQA
 from .secret import *  # NOQA
