@@ -1,6 +1,7 @@
 # Zynicide Synthesis
 zynicide/settings/secret.py
 db.sqlite3
+node_modules
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
