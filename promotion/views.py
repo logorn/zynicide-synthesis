@@ -7,4 +7,4 @@ from django.http import HttpResponse
 
 def promotion(request):
 	"""view for the zynicide synthesis promotional app"""
-	return HttpResponse("Zynicide Synthesis!")
+	return render(request, 'promotion/dist/index.html')
