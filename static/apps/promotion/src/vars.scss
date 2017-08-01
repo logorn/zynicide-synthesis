@@ -2,30 +2,17 @@
     Define theme colors
 */
 
-$brand-primary: #525868;
+$brand-primary: #151515;
 $brand-primary-light: lighten($brand-primary, 15%);
 $brand-primary-lighter: lighten($brand-primary, 33%);
 $brand-primary-dark: darken($brand-primary, 15%);
 $brand-primary-darker: darken($brand-primary, 33%);
 
-$brand-secondary: #299CD7;
+$brand-secondary: #76BA1B;
 $brand-secondary-light: lighten($brand-secondary, 15%);
 $brand-secondary-dark: darken($brand-secondary, 15%);
 
-$brand-tertiary: #CB415F;
-$brand-tertiary-light: lighten($brand-tertiary, 15%);
-$brand-tertiary-dark: darken($brand-tertiary, 15%);
-
-// Alternate #A1B5D8
-$brand-quaternary: #299CD7;
-$brand-quaternary-light: lighten($brand-quaternary, 10%);
-$brand-quaternary-dark: darken($brand-quaternary, 10%);
-
-$brand-success: #15CD72;
-$brand-danger: #DA4429;
-$brand-warning: #F8E71C;
-$brand-info: $brand-primary-lighter;
-$brand-link: $brand-quaternary;
+$brand-link: $brand-secondary-light;
 
 $gray: #C9C9C9;
 $gray-light: lighten($gray, 16.5%);
