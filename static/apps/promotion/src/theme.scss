@@ -1,0 +1,208 @@
+@import "./vars.scss";
+
+
+/*
+	Responsive break points
+ */
+
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
+
+
+/*
+    Define theme font family(s)
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Lato|Ubuntu');
+
+@mixin lato($size, $weight) {
+    font-family: 'Lato', sans-serif;
+    font-size: $size;
+    font-weight: $weight;
+}
+
+@mixin ubuntu($size, $weight) {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: $size;
+    font-weight: $weight;
+}
+
+@mixin font-awesome($size) {
+    font-family: FontAwesome;
+    font-size: $size;
+}
+
+
+/*
+    Define fonts
+*/
+
+@mixin jumbotron() {
+    @include lato($jumbo-font, $bold-font-weight)
+    text-transform: uppercase;
+    letter-spacing: 7.91px;
+}
+
+@mixin header() {
+    @include ubuntu($extra-large-font, $normal-font-weight);
+    letter-spacing: 0;
+    line-height: 3.214rem;
+}
+
+@mixin sub-header() {
+    @include ubuntu($medium-font, $thin-font-weight);
+    text-transform: none;
+    line-height: 2.5rem;
+    letter-spacing: 1px;
+}
+
+@mixin text() {
+    @include lato($regular-font, $thin-font-weight);
+    letter-spacing: 0.1rem;
+}
+
+@mixin small-text() {
+    @include lato($small-font, $normal-font-weight);
+    letter-spacing: 0.1rem;
+}
+
+
+/*
+    Define hover behavior
+*/
+
+@mixin hoverText($color) {
+    @include smoothTransition(0.25s);
+    cursor: pointer;
+    &:hover {
+        color: $color;
+        @include smoothTransition(0.25s);
+    }
+}
+
+
+/*
+    Define shadow(s)
+*/
+
+@mixin shadow() {
+    box-shadow: 0 2px 2px $gray-darker;
+    -webkit-box-shadow: 0 2px 2px $gray-darker;
+    -moz-box-shadow: 0 2px 2px $gray-darker;
+    -o-box-shadow: 0 2px 2px $gray-darker;
+    -ms-box-shadow: 0 2px 2px $gray-darker;
+}
+
+@mixin softShadow($color) {
+    box-shadow: 0 3px 12px $color;
+    -webkit-box-shadow: 0 3px 12px $color;
+    -moz-box-shadow: 0 3px 12px $color;
+    -o-box-shadow: 0 3px 12px $color;
+    -ms-box-shadow: 0 3px 12px $color;
+}
+
+
+/*
+    Define transition(s)
+*/
+
+@mixin smoothTransition($length) {
+    transition: all $length cubic-bezier(0.2, 0.3, 0.25, 0.9);
+}
+
+
+/*
+    Define default styling
+*/
+
+html {
+    font-size: $base-font-size - 2;
+    @include for-tablet-landscape-up {
+        font-size: $base-font-size;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+a.outter-link, a.inner-link {
+    border-bottom: 2px solid;
+    @include hoverText($brand-link);
+}
+
+a, h1, h2, h3, h4, h5, h6, p, li, span, button {
+    color: $brand-primary;
+    &.uppercase-text {
+        text-transform: uppercase;
+    }
+    &.capitalize-text {
+        text-transform: capitalize;
+    }
+    &.muted-text {
+        color: $gray !important;
+    }
+    &.auto-line-height {
+        line-height: 1.15;
+    }
+    strong {
+        color: $brand-link;
+        font-weight: $normal-font-weight;
+    }
+    b {
+        font-weight: $bold-font-weight !important;
+    }
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+h1 {
+    @include jumbotron();
+}
+
+h2, h3 {
+    @include header();
+}
+
+h4, h5 {
+    @include sub-header();
+}
+
+h6, p, li, span, td, button {
+    margin: 0;
+    @include text();
+    small {
+        @include small-text();
+    }
+}
+p {
+    small {
+        line-height: 2.25rem;
+    }
+}
+.SmallTextGroup {
+    a, h1, h2, h3, h4, h5, h6, p, li, span, button {
+        @include small-text();
+    }
+    p {
+        line-height: 2.25rem;
+    }
+}
+
+h6 {
+    line-height: 20px;
+}

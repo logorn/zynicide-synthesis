@@ -1,0 +1,83 @@
+/*
+    Define theme colors
+*/
+
+$brand-primary: #151515;
+$brand-primary-light: lighten($brand-primary, 15%);
+$brand-primary-lighter: lighten($brand-primary, 33%);
+$brand-primary-dark: darken($brand-primary, 15%);
+$brand-primary-darker: darken($brand-primary, 33%);
+
+$brand-secondary: #76BA1B;
+$brand-secondary-light: lighten($brand-secondary, 15%);
+$brand-secondary-dark: darken($brand-secondary, 15%);
+
+$brand-link: $brand-secondary-light;
+
+$gray: #C9C9C9;
+$gray-light: lighten($gray, 16.5%);
+$gray-lighter: lighten($gray, 22%);
+$gray-dark: darken($gray, 16.5%);
+$gray-darker: darken($gray, 33%);
+
+$white: #FFFFFF;
+$black: #333333;
+
+
+/*
+    z-index
+ */
+
+$z-index-0: 0;
+$z-index-1: 1000;
+$z-index-2: 2000;
+$z-index-3: 3000;
+$z-index-4: 4000;
+$z-index-5: 5000;
+$z-index-6: 6000;
+$z-index-7: 7000;
+$z-index-8: 8000;
+$z-index-9: 9000;
+$z-index-10: 10000;
+
+
+/*
+    Define font sizes
+*/
+
+$base-font-size: 14px;
+
+$tiny-font: 0.667rem;
+$small-font: 0.75rem;
+$regular-font: 1rem;
+$medium-font: 1.25rem;
+$large-font: 1.667rem;
+$extra-large-font: 2.75rem;
+$jumbo-font: 3.333rem;
+
+
+
+/*
+    Define font weights
+*/
+
+$thin-font-weight: 400;
+$normal-font-weight: 700;
+$bold-font-weight: 900;
+
+
+/*
+	Define paddings
+ */
+$padding-1: 35px;
+$padding-2: 50px;
+$padding-3: 75px;
+$padding-4: 100px;
+$padding-5: 115px;
+
+
+/*
+    Define border radius
+*/
+
+$border-radius: 2.5px;
