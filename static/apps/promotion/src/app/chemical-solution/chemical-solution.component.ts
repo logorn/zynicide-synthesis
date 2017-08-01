@@ -21,6 +21,7 @@ export class ChemicalSolutionComponent implements OnInit {
   ngOnInit() {
     this.calculateDimensions();
     this.initMolecules();
+    this.moveMolecules();
   }
 
   @HostListener('window:resize', ['$event'])
@@ -39,6 +40,45 @@ export class ChemicalSolutionComponent implements OnInit {
     for (var i = this.numberMolecules - 1; i >= 0; i--) {
       this.molecules.push(this.createMolecule());
     }
+  }
+
+  moveMolecules(): void {
+    for (var i = this.molecules.length - 1; i >= 0; i--) {
+      let currentMolecule = this.molecules[i]
+      currentMolecule.position.xPos += currentMolecule.velocity.xVel;
+      currentMolecule.position.yPos += currentMolecule.velocity.yVel;
+      // If the molecule moves off of the screen, reset it
+      if (currentMolecule.position.xPos < this.left || currentMolecule.position.xPos > this.right || currentMolecule.position.yPos < this.top || currentMolecule.position.yPos > this.bottom) {
+        let randomPlacement = Math.random();
+        let startOnSide = randomPlacement < 0.5 ? true: false;
+        if (startOnSide) {
+          let startOnLeft = randomPlacement < 0.25 ? true : false;
+          if (startOnLeft) {
+            currentMolecule.position.xPos = this.left;
+            currentMolecule.velocity.xVel = this.generateVelocity('positive');
+          } else {
+            currentMolecule.position.xPos = this.right;
+            currentMolecule.velocity.xVel = this.generateVelocity('negative');
+          }
+          currentMolecule.position.yPos = this.generatePosition(this.top, this.bottom);
+          currentMolecule.velocity.yVel = this.generateVelocity('any');
+        } else {
+          let startOnTop = randomPlacement < 0.75 ? true : false;
+          if (startOnTop) {
+            currentMolecule.position.yPos = this.top;
+            currentMolecule.velocity.yVel = this.generateVelocity('positive');
+          } else {
+            currentMolecule.position.yPos = this.bottom;
+            currentMolecule.velocity.yVel = this.generateVelocity('negative');
+          }
+          currentMolecule.position.xPos = this.generatePosition(this.left, this.right);
+          currentMolecule.velocity.xVel = this.generateVelocity('any');
+        }
+      }
+    }
+    setTimeout(() => {
+      this.moveMolecules();
+    }, 20);
   }
 
   createMolecule(): {} {

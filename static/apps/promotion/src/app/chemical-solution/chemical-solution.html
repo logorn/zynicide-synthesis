@@ -1,1 +1,7 @@
-<div class="ChemicalSolution"></div>
+<div class="ChemicalSolution">
+	<app-molecule class="ChemicalSolution_molecule"
+		*ngFor="let molecule of molecules"
+		[xPos]="molecule.position.xPos"
+		[yPos]="molecule.position.yPos"
+	></app-molecule>
+</div>
