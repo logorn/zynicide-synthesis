@@ -15,6 +15,7 @@ export class ChemicalSolutionComponent implements OnInit {
   maxVelocity: number = 5;
   minVelocity: number = 1;
   molecules = []
+  moveMoleculesTimeout;
 
   constructor(private el: ElementRef) { }
 
@@ -26,7 +27,7 @@ export class ChemicalSolutionComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   onResize(event) {
-    this.calculateDimensions()
+    this.resetSolution();
   }
 
   calculateDimensions(): void {
@@ -34,6 +35,9 @@ export class ChemicalSolutionComponent implements OnInit {
      this.top = this.el.nativeElement.offsetTop;
      this.right = this.el.nativeElement.offsetWidth;
      this.left = this.el.nativeElement.offsetLeft;
+     // Linear decrease left too few molecules on mobile, use log
+     this.numberMolecules = Math.floor(Math.log(window.innerWidth / 70) * 6.67);
+     console.log(this.numberMolecules);
   }
 
   initMolecules(): void {
@@ -76,7 +80,7 @@ export class ChemicalSolutionComponent implements OnInit {
         }
       }
     }
-    setTimeout(() => {
+    this.moveMoleculesTimeout = setTimeout(() => {
       this.moveMolecules();
     }, 20);
   }
@@ -110,6 +114,14 @@ export class ChemicalSolutionComponent implements OnInit {
 
   generatePosition(minPos: number, maxPos: number): number {
     return Math.floor(Math.random() * (maxPos - minPos)) + minPos;
+  }
+
+  resetSolution() {
+    this.calculateDimensions();
+    this.molecules = [];
+    clearTimeout(this.moveMoleculesTimeout);
+    this.initMolecules();
+    this.moveMolecules();
   }
 
 }
