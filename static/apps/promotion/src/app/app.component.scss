@@ -1,11 +1,36 @@
 @import "./../theme.scss";
 
-.Header {
+.HeaderChemicalSolution {
 	height: 100vh;
 	position: relative;
 	display: block;
+}
+
+.Header {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
 	.Header_topRow {
 		display: flex;
+	    flex-basis: auto;
+	    flex-shrink: 1;
+	    flex-grow: 0;
+	}
+	.Header_logo {
+	    flex-basis: auto;
+	    flex-shrink: 1;
+	    flex-grow: 1;
+		align-self: center;
+		@include for-tablet-landscape-up {
+			margin-bottom: 7%;
+		}
+	}
+	.Header_zynicideSynthesis {
+		color: $white;
+		align-self: flex-start;
+	    flex-basis: auto;
+	    flex-shrink: 1;
+	    flex-grow: 0;
 	}
 }
 
