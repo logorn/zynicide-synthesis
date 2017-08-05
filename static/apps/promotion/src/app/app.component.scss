@@ -1,7 +1,18 @@
 @import "./../theme.scss";
 
-.ChemicalSolution {
+.Header {
 	height: 100vh;
 	position: relative;
 	display: block;
+	.Header_topRow {
+		display: flex;
+	}
+}
+
+.ServiceList {
+	color: $white;
+	margin: 0 auto 0 0;
+	.ServiceList_service {
+		color: inherit;
+	}
 }
