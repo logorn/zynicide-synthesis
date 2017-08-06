@@ -137,10 +137,17 @@ html {
 
 a {
     text-decoration: none;
+
 }
-a.outter-link, a.inner-link {
-    border-bottom: 2px solid;
+a.text-link {
+    border-bottom: 2px solid $brand-secondary;
     @include hoverText($brand-link);
+}
+a.header-link {
+    border-bottom: 2px solid $brand-secondary;
+    @include hoverText($brand-link);
+    text-transform: uppercase;
+    font-weight: $bold-font-weight;
 }
 
 a, h1, h2, h3, h4, h5, h6, p, li, span, button {
@@ -190,6 +197,7 @@ h6, p, li, span, td, button {
     }
 }
 p {
+    line-height: 1.79rem;
     small {
         line-height: 2.25rem;
     }
@@ -208,10 +216,10 @@ h6 {
 }
 
 section {
-    &.Section {
-        padding: $mobile-padding-1;
+    &.Section--mdHeight {
+        padding: $mobile-padding-2 $mobile-padding-1;
         @include for-tablet-landscape-up {
-            padding: $padding-1;
+            padding: $padding-2 $padding-1;
         }
     }
     &.Section--light {

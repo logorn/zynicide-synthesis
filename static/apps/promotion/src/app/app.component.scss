@@ -41,3 +41,15 @@
 		color: inherit;
 	}
 }
+
+.Intro {
+	.Intro_info {
+		width: 100%;
+		max-width: 700px;
+		margin: 0 auto;
+	}
+	.Intro_cta {
+		text-align: center;
+		margin-top: 2.5rem;
+	}
+}
