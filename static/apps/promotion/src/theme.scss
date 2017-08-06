@@ -206,3 +206,89 @@ p {
 h6 {
     line-height: 20px;
 }
+
+.Button {
+    outline: none;
+    padding: 15px 25px;
+    border-radius: $border-radius;
+    cursor: pointer;
+    @include smoothTransition(0.25s);
+}
+
+.Button--lifted {
+    @include shadow();
+}
+
+.Button--brandPrimary {
+    border: none;
+    background-color: $brand-primary;
+    color: $white;
+    .Button_iconContainer {
+        border-top: 2px solid $brand-primary;
+        border-left: 2px solid $brand-primary;
+        border-bottom: 2px solid $brand-primary;
+    }
+    .Button_icon {
+        color: $brand-primary;
+    }
+    &:hover {
+        background-color: lighten($brand-primary, 5%);
+        @include smoothTransition(0.25s);
+    }
+}
+
+.Button--brandSecondary {
+    border: none;
+    background-color: $brand-secondary;
+    color: $white;
+    .Button_iconContainer {
+        border-top: 2px solid $brand-secondary;
+        border-left: 2px solid $brand-secondary;
+        border-bottom: 2px solid $brand-secondary;
+    }
+    .Button_icon {
+        color: $brand-secondary;
+    }
+    &:hover {
+        background-color: lighten($brand-secondary, 5%);
+        @include smoothTransition(0.25s);
+    }
+}
+
+.Button--ghost {
+    padding: 7px 12px;
+    border: 3px solid $white;
+    background-color: transparent;
+    color: $white;
+    .Button_iconContainer {
+        border-top: 2px solid $white;
+        border-left: 2px solid $white;
+        border-bottom: 2px solid $white;
+    }
+    .Button_icon {
+        color: $white;
+    }
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.25);
+        @include smoothTransition(0.25s);
+    }
+}
+
+.Button--ghostInvert {
+    padding: 7px 12px;
+    border: 3px solid $brand-primary;
+    background-color: transparent;
+    color: $brand-primary;
+    .Button_iconContainer {
+        border-top: 2px solid $brand-primary;
+        border-left: 2px solid $brand-primary;
+        border-bottom: 2px solid $brand-primary;
+    }
+    .Button_icon {
+        color: $brand-primary;
+    }
+    &:hover {
+        @include softShadow($gray);
+        @include smoothTransition(0.25s);
+    }
+}
