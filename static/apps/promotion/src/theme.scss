@@ -207,6 +207,24 @@ h6 {
     line-height: 20px;
 }
 
+section {
+    &.Section {
+        padding: $mobile-padding-1;
+        @include for-tablet-landscape-up {
+            padding: $padding-1;
+        }
+    }
+    &.Section--light {
+        background-color: $white;
+    }
+    &.Section--gray {
+        background-color: $gray-light;
+    }
+    &.Section--dark {
+        background-color: $black;
+    }
+}
+
 .Button {
     outline: none;
     padding: 15px 25px;
