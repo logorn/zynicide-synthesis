@@ -100,18 +100,10 @@
 
 @mixin shadow() {
     box-shadow: 0 2px 2px $gray-darker;
-    -webkit-box-shadow: 0 2px 2px $gray-darker;
-    -moz-box-shadow: 0 2px 2px $gray-darker;
-    -o-box-shadow: 0 2px 2px $gray-darker;
-    -ms-box-shadow: 0 2px 2px $gray-darker;
 }
 
 @mixin softShadow($color) {
-    box-shadow: 0 3px 12px $color;
-    -webkit-box-shadow: 0 3px 12px $color;
-    -moz-box-shadow: 0 3px 12px $color;
-    -o-box-shadow: 0 3px 12px $color;
-    -ms-box-shadow: 0 3px 12px $color;
+    box-shadow: 12px 15px 20px $color;
 }
 
 
@@ -159,7 +151,7 @@ a, h1, h2, h3, h4, h5, h6, p, li, span, button {
         text-transform: capitalize;
     }
     &.muted-text {
-        color: $gray !important;
+        color: $gray-darker !important;
     }
     &.auto-line-height {
         line-height: 1.15;
@@ -216,6 +208,12 @@ h6 {
 }
 
 section {
+    &.Section--smHeight {
+        padding: $mobile-padding-1;
+        @include for-tablet-landscape-up {
+            padding: $padding-1;
+        }
+    }
     &.Section--mdHeight {
         padding: $mobile-padding-2 $mobile-padding-1;
         @include for-tablet-landscape-up {
