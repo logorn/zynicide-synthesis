@@ -159,6 +159,9 @@ a, h1, h2, h3, h4, h5, h6, p, li, span, strong, button {
     &.auto-line-height {
         line-height: 1.15;
     }
+    &.italic-text {
+        font-style: italic;
+    }
     strong {
         color: $brand-link;
         font-weight: $normal-font-weight;
