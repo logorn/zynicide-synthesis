@@ -142,10 +142,13 @@ a.header-link {
     font-weight: $bold-font-weight;
 }
 
-a, h1, h2, h3, h4, h5, h6, p, li, span, button {
+a, h1, h2, h3, h4, h5, h6, p, li, span, strong, button {
     color: $brand-primary;
     &.uppercase-text {
         text-transform: uppercase;
+    }
+    &.lowercase-text {
+        text-transform: none;
     }
     &.capitalize-text {
         text-transform: capitalize;
@@ -181,7 +184,7 @@ h4, h5 {
     @include sub-header();
 }
 
-h6, p, li, span, td, button {
+h6, p, li, td, button {
     margin: 0;
     @include text();
     small {
