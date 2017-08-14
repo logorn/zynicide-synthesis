@@ -88,3 +88,46 @@
 		}
 	}
 }
+
+.Review {
+	padding: 1.5rem 0;
+	border-top: 2px dashed $brand-primary;
+	border-bottom: 2px dashed $brand-primary;
+	width: 100%;
+	margin: 0 auto;
+	display: block;
+	@include for-tablet-landscape-up {
+		width: 600px;
+		display: flex;
+		padding: 1rem 0;
+	}
+	.Review_image {
+		@include for-tablet-landscape-up {
+			height: 150px;
+			width: 150px;
+			flex-basis: 150px;
+		}
+		height: 300px;
+		width: 300px;
+		flex-basis: 300px;
+		border-radius: 50%;
+		display: block;
+		margin: 0 auto;
+	}
+	.Review_info {
+		@include for-tablet-landscape-up {
+			padding: 0 0 0 1.5rem;
+		}
+	}
+	.Review_reviewer {
+		margin-bottom: 0.5rem;
+		margin-top: 1.5rem;
+		@include for-tablet-landscape-up {
+			margin-top: 0;
+			margin-bottom: 0.5rem;
+		}
+	}
+	.Review_text {
+		line-height: 2rem;
+	}
+}
