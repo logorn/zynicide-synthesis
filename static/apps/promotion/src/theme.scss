@@ -220,6 +220,12 @@ section {
             padding: $padding-2 $padding-1;
         }
     }
+    &.Section--lgHeight {
+        padding: $mobile-padding-3 $mobile-padding-1;
+        @include for-tablet-landscape-up {
+            padding: $padding-3 $padding-1;
+        }
+    }
     &.Section--light {
         background-color: $white;
     }
