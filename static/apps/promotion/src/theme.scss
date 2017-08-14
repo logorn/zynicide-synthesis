@@ -243,6 +243,19 @@ section {
     }
 }
 
+hr {
+    border: none;
+    &.divider--dotted {
+        background-image: url(/../src/assets/dotted-divider.png);
+        height: 0.538rem;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: 3rem 0.538rem;
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
 .Button {
     outline: none;
     padding: 15px 25px;
