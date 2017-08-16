@@ -41,3 +41,93 @@
 		color: inherit;
 	}
 }
+
+.Intro {
+	.Intro_info {
+		width: 100%;
+		max-width: 700px;
+		margin: 0 auto;
+	}
+	.Intro_cta {
+		text-align: center;
+		margin-top: 2.5rem;
+	}
+}
+
+.RecentWork {
+	.RecentWork_title {
+		margin-bottom: 1rem;
+		text-align: center;
+		@include for-tablet-landscape-up {
+			text-align: left;
+		}
+	}
+	.RecentWork_showcase {
+		width: 100%;
+		max-width: 900px;
+		margin: 0 auto;
+	}
+}
+
+.Showcase {
+	display: block;
+	width: 100%;
+	@include for-tablet-landscape-up {
+		display: flex;
+		justify-content: space-between;
+	}
+	.Showcase_item {
+		height: 275px;
+		width: 275px;
+		@include softShadow($gray-darker);
+		background-color: $brand-secondary-light;
+		border-radius: $border-radius;
+		margin: 0 auto 2rem auto;
+		@include for-tablet-landscape-up {
+			margin: 0;
+		}
+	}
+}
+
+.Review {
+	padding: 1.5rem 0;
+	border-top: 2px dashed $brand-primary;
+	border-bottom: 2px dashed $brand-primary;
+	width: 100%;
+	margin: 0 auto;
+	display: block;
+	@include for-tablet-landscape-up {
+		width: 600px;
+		display: flex;
+		padding: 1rem 0;
+	}
+	.Review_image {
+		@include for-tablet-landscape-up {
+			height: 150px;
+			width: 150px;
+			flex-basis: 150px;
+		}
+		height: 300px;
+		width: 300px;
+		flex-basis: 300px;
+		border-radius: 50%;
+		display: block;
+		margin: 0 auto;
+	}
+	.Review_info {
+		@include for-tablet-landscape-up {
+			padding: 0 0 0 1.5rem;
+		}
+	}
+	.Review_reviewer {
+		margin-bottom: 0.5rem;
+		margin-top: 1.5rem;
+		@include for-tablet-landscape-up {
+			margin-top: 0;
+			margin-bottom: 0.5rem;
+		}
+	}
+	.Review_text {
+		line-height: 2rem;
+	}
+}

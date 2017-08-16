@@ -100,18 +100,10 @@
 
 @mixin shadow() {
     box-shadow: 0 2px 2px $gray-darker;
-    -webkit-box-shadow: 0 2px 2px $gray-darker;
-    -moz-box-shadow: 0 2px 2px $gray-darker;
-    -o-box-shadow: 0 2px 2px $gray-darker;
-    -ms-box-shadow: 0 2px 2px $gray-darker;
 }
 
 @mixin softShadow($color) {
-    box-shadow: 0 3px 12px $color;
-    -webkit-box-shadow: 0 3px 12px $color;
-    -moz-box-shadow: 0 3px 12px $color;
-    -o-box-shadow: 0 3px 12px $color;
-    -ms-box-shadow: 0 3px 12px $color;
+    box-shadow: 12px 15px 20px $color;
 }
 
 
@@ -137,25 +129,38 @@ html {
 
 a {
     text-decoration: none;
+
 }
-a.outter-link, a.inner-link {
-    border-bottom: 2px solid;
+a.text-link {
+    border-bottom: 2px solid $brand-secondary;
     @include hoverText($brand-link);
 }
+a.header-link {
+    border-bottom: 2px solid $brand-secondary;
+    @include hoverText($brand-link);
+    text-transform: uppercase;
+    font-weight: $bold-font-weight;
+}
 
-a, h1, h2, h3, h4, h5, h6, p, li, span, button {
+a, h1, h2, h3, h4, h5, h6, p, li, span, strong, button {
     color: $brand-primary;
     &.uppercase-text {
         text-transform: uppercase;
+    }
+    &.lowercase-text {
+        text-transform: none;
     }
     &.capitalize-text {
         text-transform: capitalize;
     }
     &.muted-text {
-        color: $gray !important;
+        color: $gray-darker !important;
     }
     &.auto-line-height {
         line-height: 1.15;
+    }
+    &.italic-text {
+        font-style: italic;
     }
     strong {
         color: $brand-link;
@@ -182,7 +187,7 @@ h4, h5 {
     @include sub-header();
 }
 
-h6, p, li, span, td, button {
+h6, p, li, td, button {
     margin: 0;
     @include text();
     small {
@@ -190,6 +195,7 @@ h6, p, li, span, td, button {
     }
 }
 p {
+    line-height: 1.79rem;
     small {
         line-height: 2.25rem;
     }
@@ -205,6 +211,49 @@ p {
 
 h6 {
     line-height: 20px;
+}
+
+section {
+    &.Section--smHeight {
+        padding: $mobile-padding-1;
+        @include for-tablet-landscape-up {
+            padding: $padding-1;
+        }
+    }
+    &.Section--mdHeight {
+        padding: $mobile-padding-2 $mobile-padding-1;
+        @include for-tablet-landscape-up {
+            padding: $padding-2 $padding-1;
+        }
+    }
+    &.Section--lgHeight {
+        padding: $mobile-padding-3 $mobile-padding-1;
+        @include for-tablet-landscape-up {
+            padding: $padding-3 $padding-1;
+        }
+    }
+    &.Section--light {
+        background-color: $white;
+    }
+    &.Section--gray {
+        background-color: $gray-light;
+    }
+    &.Section--dark {
+        background-color: $black;
+    }
+}
+
+hr {
+    border: none;
+    &.divider--dotted {
+        background-image: url(/../src/assets/dotted-divider.png);
+        height: 0.538rem;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: 3rem 0.538rem;
+        width: 100%;
+        max-width: 100%;
+    }
 }
 
 .Button {
