@@ -122,6 +122,7 @@
 
 html {
     font-size: $base-font-size - 2;
+    color: $brand-primary;
     @include for-tablet-landscape-up {
         font-size: $base-font-size;
     }
@@ -143,7 +144,7 @@ a.header-link {
 }
 
 a, h1, h2, h3, h4, h5, h6, p, li, span, strong, button {
-    color: $brand-primary;
+    color: inherit;
     &.uppercase-text {
         text-transform: uppercase;
     }
