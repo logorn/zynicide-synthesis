@@ -134,32 +134,50 @@
 
 .WhatWeOffer {
 	.WhatWeOffer_title {
-		text-align: center;
+		text-align: left;
+		@include for-tablet-landscape-up {
+			text-align: center;
+		}
 	}
 	.WhatWeOffer_rowOne {
-		display: flex;
-		justify-content: space-between;
+		display: block;
 		width: 100%;
 		max-width: 1000px;
-		margin: 2rem auto;
+		@include for-tablet-landscape-up {
+			display: flex;
+			justify-content: space-between;
+			margin: 2rem auto;
+		}
 	}
 	.WhatWeOffer_rowTwo {
-		display: flex;
-		justify-content: space-around;
+		display: block;
 		width: 100%;
 		max-width: 900px;
-		margin: 4rem auto 2rem auto;
+		@include for-tablet-landscape-up {
+			display: flex;
+			justify-content: space-around;
+			margin: 4rem auto 2rem auto;
+		}
 	}
 }
 
 .Offering {
 	width: 100%;
-	max-width: 275px;
+	margin: 2rem 0;
+	@include for-tablet-landscape-up {
+		max-width: 275px;
+		margin: 0;
+	}
 	.Offering_title {
 		margin: 0 0 2rem 0;
 	}
 }
 #ResponsiveImg {
-	width: 465px;
-	height: 287px;
+	width: 100%;
+	height: auto;
+	margin: 2rem 0;
+	@include for-tablet-landscape-up {
+		width: 465px;
+		height: 287px;
+	}
 }
