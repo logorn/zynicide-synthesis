@@ -136,4 +136,19 @@
 	.WhatWeOffer_title {
 		text-align: center;
 	}
+	.WhatWeOffer_rowOne {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		max-width: 1000px;
+		margin: 2rem auto;
+	}
+}
+
+.Offering {
+	width: 100%;
+	max-width: 275px;
+	.Offering_title {
+		margin: 0 0 2rem 0;
+	}
 }

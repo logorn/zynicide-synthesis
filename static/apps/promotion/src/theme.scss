@@ -63,7 +63,7 @@
 }
 
 @mixin sub-header() {
-    @include ubuntu($medium-font, $thin-font-weight);
+    @include ubuntu($large-font, $normal-font-weight);
     text-transform: none;
     line-height: 2.5rem;
     letter-spacing: 1px;
