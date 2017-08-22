@@ -69,9 +69,22 @@
     letter-spacing: 1px;
 }
 
+@mixin alt-sub-header() {
+    @include lato($large-font, $bold-font-weight);
+    text-transform: uppercase;
+    line-height: 2.5rem;
+    letter-spacing: 1px;
+}
+
 @mixin text() {
     @include lato($regular-font, $thin-font-weight);
     letter-spacing: 0.1rem;
+}
+
+@mixin alt-text() {
+    @include ubuntu($regular-font, $normal-font-weight);
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
 }
 
 @mixin small-text() {

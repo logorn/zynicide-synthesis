@@ -218,7 +218,34 @@
 }
 
 .Footer {
-
+	.Footer_info {
+		display: flex;
+		justify-content: space-around;
+		padding: 5rem 0;
+	}
+	.Footer_about {
+		flex: 2;
+		max-width: 440px;
+	}
+	.Footer_contact {
+		flex: 1;
+		max-width: 245px;
+	}
+	.Footer_title {
+		@include alt-sub-header();
+		margin-bottom: 2.5rem;
+	}
+	.Footer_paragraph {
+		margin: 0.75rem 0;
+	}
+	.Footer_copy {
+		margin: 5rem 0 2rem 0;
+	}
+	.Footer_copyTitle {
+		@include alt-text();
+		text-align: center;
+		margin: 1.5rem 0;
+	}
 }
 .FooterBar {
 	display: flex;
