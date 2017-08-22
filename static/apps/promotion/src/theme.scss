@@ -63,8 +63,15 @@
 }
 
 @mixin sub-header() {
-    @include ubuntu($medium-font, $thin-font-weight);
+    @include ubuntu($large-font, $normal-font-weight);
     text-transform: none;
+    line-height: 2.5rem;
+    letter-spacing: 1px;
+}
+
+@mixin alt-sub-header() {
+    @include lato($large-font, $bold-font-weight);
+    text-transform: uppercase;
     line-height: 2.5rem;
     letter-spacing: 1px;
 }
@@ -72,6 +79,12 @@
 @mixin text() {
     @include lato($regular-font, $thin-font-weight);
     letter-spacing: 0.1rem;
+}
+
+@mixin alt-text() {
+    @include ubuntu($regular-font, $normal-font-weight);
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
 }
 
 @mixin small-text() {
@@ -122,6 +135,7 @@
 
 html {
     font-size: $base-font-size - 2;
+    color: $brand-primary;
     @include for-tablet-landscape-up {
         font-size: $base-font-size;
     }
@@ -143,7 +157,7 @@ a.header-link {
 }
 
 a, h1, h2, h3, h4, h5, h6, p, li, span, strong, button {
-    color: $brand-primary;
+    color: inherit;
     &.uppercase-text {
         text-transform: uppercase;
     }
