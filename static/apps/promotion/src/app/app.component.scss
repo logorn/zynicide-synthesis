@@ -216,3 +216,40 @@
 		margin: 0 0 1.5rem 0;
 	}
 }
+
+.Footer {
+
+}
+.FooterBar {
+	display: flex;
+	width: 100%;
+	max-width: 1500px;
+	margin: 0 auto;
+	.FooterBar_left {
+		flex: 1;
+		flex-grow: 1;
+		flex-shrink: 1;
+		flex-basis: auto;
+		padding: 0.75rem;
+	}
+	.FooterBar_right {
+		flex: 1;
+		flex-grow: 1;
+		flex-shrink: 1;
+		flex-basis: auto;
+		transform: rotate(180deg);
+		padding: 0.75rem;
+	}
+	.FooterBar_logo {
+		flex-grow: 0;
+		flex-shrink: 0;
+		flex-basis: 75px;
+		width: 75px;
+		height: 71.4px;
+		@include for-tablet-landscape-up {
+			flex-basis: 125px;
+			width: 125px;
+			height: 119px;
+		}
+	}
+}
