@@ -219,9 +219,15 @@
 
 .Footer {
 	.Footer_info {
-		display: flex;
-		justify-content: space-around;
-		padding: 5rem 0;
+		display: block;
+		padding: 5rem $mobile-padding-1;
+        @include for-tablet-landscape-up {
+            padding: 5rem $padding-1;
+        }
+		@include for-tablet-landscape-up {
+			display: flex;
+			justify-content: space-around;
+		}
 	}
 	.Footer_about {
 		flex: 2;
@@ -230,6 +236,10 @@
 	.Footer_contact {
 		flex: 1;
 		max-width: 245px;
+		margin: 3rem 0 0 0;
+		@include for-tablet-landscape-up {
+			margin: 0;
+		}
 	}
 	.Footer_title {
 		@include alt-sub-header();
