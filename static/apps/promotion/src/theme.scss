@@ -355,3 +355,13 @@ hr {
         @include smoothTransition(0.25s);
     }
 }
+
+
+/*
+    Define typed.js stylings
+ */
+
+.typed-cursor {
+    font-size: inherit;
+    color: inherit;
+}

@@ -34,12 +34,15 @@
 	}
 }
 
-.ServiceList {
-	color: $white;
+.WhatIAm {
 	margin: 0 auto 0 0;
-	.ServiceList_service {
-		color: inherit;
-	}
+	display: flex;
+	color: $white;
+	font-size: 32px;
+}
+#what-i-am {
+	color: inherit;
+	@include sub-header();
 }
 
 .Intro {
