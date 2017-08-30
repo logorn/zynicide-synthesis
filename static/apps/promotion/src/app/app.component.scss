@@ -38,7 +38,7 @@
 	margin: 0 auto 0 0;
 	display: flex;
 	color: $white;
-	font-size: 32px;
+	font-size: 37px;
 }
 #what-i-am {
 	color: inherit;
@@ -70,15 +70,15 @@
 	}
 }
 
-.RecentWork {
-	.RecentWork_title {
+.Projects {
+	.Projects_title {
 		margin-bottom: 1rem;
 		text-align: center;
 		@include for-tablet-landscape-up {
 			text-align: left;
 		}
 	}
-	.RecentWork_showcase {
+	.Projects_showcase {
 		width: 100%;
 		max-width: 900px;
 		margin: 0 auto;
