@@ -18,7 +18,8 @@
       "prefix": "app",
       "styles": [
         "layout.scss",
-        "theme.scss"
+        "theme.scss",
+        "font-awesome.scss"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",

@@ -46,14 +46,27 @@
 }
 
 .Intro {
+	text-align: center;
+	.Intro_profilePic {
+		border-radius: 50%;
+		margin: 0 auto 2rem auto;
+		display: block;
+		width: 200px;
+		height: 200px;
+	}
 	.Intro_info {
 		width: 100%;
 		max-width: 700px;
-		margin: 0 auto;
-	}
-	.Intro_cta {
+		margin: 2rem auto;
 		text-align: center;
-		margin-top: 2.5rem;
+	}
+	.Intro_social {
+		font-size: 2rem;
+		display: inline;
+	}
+	.Intro_socialLink {
+		margin: 0 0.75rem;
+		@include hoverText($brand-link);
 	}
 }
 
