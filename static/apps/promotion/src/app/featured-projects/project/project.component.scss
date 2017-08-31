@@ -1,0 +1,18 @@
+@import "./../../../theme.scss";
+
+.Project {
+	height: 275px;
+	width: 275px;
+	@include softShadow($gray-darker);
+	background-color: $brand-secondary-light;
+	border-radius: $border-radius;
+	margin: 0 auto 2rem auto;
+	@include smoothTransition(0.25s);
+	@include for-tablet-landscape-up {
+		margin: 0;
+	}
+	&:hover {
+		@include smoothTransition(0.25s);
+		@include shadow();
+	}
+}
