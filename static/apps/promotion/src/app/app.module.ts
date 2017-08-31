@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule, XSRFStrategy, CookieXSRFStrategy } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { AppService } from './app.service';
 import { ChemicalSolutionModule } from './chemical-solution/chemical-solution.module';
 import { FeaturedProjectsModule } from './featured-projects/featured-projects.module';
 
@@ -11,10 +13,13 @@ import { FeaturedProjectsModule } from './featured-projects/featured-projects.mo
     ],
     imports: [
         BrowserModule,
+        HttpModule,
         ChemicalSolutionModule,
         FeaturedProjectsModule
     ],
-    providers: [],
+    providers: [
+        AppService
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

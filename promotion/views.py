@@ -2,9 +2,13 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 
 
 def promotion(request):
-	"""view for the zynicide synthesis promotional app"""
-	return render(request, 'promotion/dist/index.html')
+    """view for the zynicide synthesis promotional app"""
+    return render(request, 'promotion/dist/index.html')
+
+
+def context(request):
+    return JsonResponse({})

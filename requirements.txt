@@ -1,3 +1,4 @@
 django==1.11.3
 django-imagekit==3.3
 pillow==3.4.2
+djangorestframework==3.6

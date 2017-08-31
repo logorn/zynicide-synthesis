@@ -1,5 +1,8 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
+
 import * as Typed from 'typed.js';
+
+import { AppService } from './app.service';
 
 @Component({
     selector: 'app-root',
@@ -8,10 +11,15 @@ import * as Typed from 'typed.js';
 })
 export class AppComponent implements OnInit {
     title = 'app';
+    context: any;
 
-    constructor(private el: ElementRef) { }
+    constructor(
+    	private el: ElementRef,
+    	private appService: AppService
+    ) { }
 
     ngOnInit() {
+    	this.appService.context.subscribe((context) => this.context = context);
 		let typed = new Typed(this.el.nativeElement.querySelector("#what-i-am"), {
 		    strings: [
 		    	"Web Developer",
