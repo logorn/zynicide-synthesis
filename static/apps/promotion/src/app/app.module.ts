@@ -7,11 +7,13 @@ import { AppService } from './app.service';
 import { ChemicalSolutionModule } from './chemical-solution/chemical-solution.module';
 import { FeaturedProjectsModule } from './featured-projects/featured-projects.module';
 import { WorkTogetherComponent } from './work-together/work-together.component';
+import { SocialIconsComponent } from './social-icons/social-icons.component';
 
 @NgModule({
     declarations: [
         AppComponent,
-        WorkTogetherComponent
+        WorkTogetherComponent,
+        SocialIconsComponent
     ],
     imports: [
         BrowserModule,

@@ -60,14 +60,6 @@
 		margin: 2rem auto;
 		text-align: center;
 	}
-	.Intro_social {
-		font-size: 2rem;
-		display: inline;
-	}
-	.Intro_socialLink {
-		margin: 0 0.75rem;
-		@include hoverText($brand-link);
-	}
 }
 
 .Freelancing {

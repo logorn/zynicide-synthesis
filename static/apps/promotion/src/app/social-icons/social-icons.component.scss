@@ -1,0 +1,12 @@
+@import "./../../theme.scss";
+
+.SocialIcons {
+	.SocialIcons_icon {
+		font-size: 2rem;
+		display: inline;
+	}
+	.SocialIcons_link {
+		margin: 0 0.75rem;
+		@include hoverText($brand-link);
+	}
+}
