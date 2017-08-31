@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { AppService } from './app.service';
 import { ChemicalSolutionModule } from './chemical-solution/chemical-solution.module';
 import { FeaturedProjectsModule } from './featured-projects/featured-projects.module';
+import { WorkTogetherComponent } from './work-together/work-together.component';
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        WorkTogetherComponent
     ],
     imports: [
         BrowserModule,

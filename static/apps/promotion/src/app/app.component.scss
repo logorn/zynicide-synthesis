@@ -136,34 +136,6 @@
 	}
 }
 
-.LetsSynthesize {
-	width: 100%;
-	margin: 0 auto;
-	@include for-tablet-landscape-up {
-		display: flex;
-		max-width: 500px;
-	}
-	.LetsSynthesize_cylinder {
-		width: 30px;
-		height: 35px;
-		margin: 2rem auto;
-		display: block;
-		@include for-tablet-landscape-up {
-			flex-basis: 30px;
-			align-self: flex-start;
-			margin: 0.4rem 0 0 0;
-		}
-	}
-	.LetsSynthesize_cta {
-		@include for-tablet-landscape-up {
-			padding: 0 0 0 1.5rem;
-		}
-	}
-	.LetsSynthesize_title {
-		margin: 0 0 1.5rem 0;
-	}
-}
-
 .Footer {
 	.Footer_info {
 		display: block;
