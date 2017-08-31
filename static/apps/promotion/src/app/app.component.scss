@@ -126,11 +126,14 @@
 	}
 }
 
-.Philosophy {
+.InterestingFacts {
 	color: $white;
 	width: 100%;
 	max-width: 900px;
 	margin: 0 auto;
+	.InterestingFacts_item, .InterestingFacts_title {
+		margin: 2rem 0;
+	}
 }
 
 .LetsSynthesize {
