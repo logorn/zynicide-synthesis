@@ -15,7 +15,7 @@ import { FeaturedProjectsModule } from './featured-projects/featured-projects.mo
         BrowserModule,
         HttpModule,
         ChemicalSolutionModule,
-        FeaturedProjectsModule
+        FeaturedProjectsModule,
     ],
     providers: [
         AppService

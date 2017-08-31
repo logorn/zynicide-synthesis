@@ -11,7 +11,12 @@ import { AppService } from './app.service';
 })
 export class AppComponent implements OnInit {
     title = 'app';
-    context: any;
+    context: any = {
+    	profile: {
+    		profile_pic: '',
+    		profile_pic_thumbnail: ''
+    	}
+    };
 
     constructor(
     	private el: ElementRef,

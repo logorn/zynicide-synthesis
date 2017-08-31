@@ -30,7 +30,9 @@
 	</div>
 </app-chemical-solution>
 <section class="Intro Section--mdHeight Section--white">
-	<img src="/static/apps/promotion/src/assets/profile-pic.jpg" alt="Profile Picture" class="Intro_profilePic">
+	<img alt="Profile Picture" class="Intro_profilePic"
+		[src]="context.profile.profile_pic"
+	>
 	<p class="Intro_info">I'm a full-stack software engineer who loves data science and building single-page web apps. When I'm not at my computer I travel the world and hike as much as I can. While I'm off on adventures I like to capture the beautiful things I see in photographs. I live in Boulder, Colorado with my amazing wife, Shelby, and crazy border collie, Skutull.</p>
 	<div class="Intro_social">
 		<a class="Intro_socialLink" href="https://github.com/zackthoutt" target="_blank" rel="noopener noreferrer">
