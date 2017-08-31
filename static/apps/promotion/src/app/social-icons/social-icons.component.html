@@ -1,4 +1,6 @@
-<div class="SocialIcons">
+<div class="SocialIcons"
+	[ngClass]="{'SocialIcons--large': size == 'large', 'SocialIcons--medium': size == 'medium', 'SocialIcons--small': size == 'small'}"
+>
 	<a class="SocialIcons_link" href="https://github.com/zackthoutt" target="_blank" rel="noopener noreferrer">
 		<i class="SocialIcons_icon fa fa-github" aria-hidden="true"></i>
 	</a>

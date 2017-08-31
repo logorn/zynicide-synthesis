@@ -2,11 +2,20 @@
 
 .SocialIcons {
 	.SocialIcons_icon {
-		font-size: 2rem;
 		display: inline;
+		font-size: inherit;
 	}
 	.SocialIcons_link {
 		margin: 0 0.75rem;
 		@include hoverText($brand-link);
 	}
+}
+.SocialIcons--large {
+	font-size: 2rem;
+}
+.SocialIcons--medium {
+	font-size: 1.5rem;
+}
+.SocialIcons--small {
+	font-size: 1rem;
 }
