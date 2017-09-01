@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { AppService } from './../app.service';
+import { SocialLink } from './social-icons';
 
 @Component({
     selector: 'app-social-icons',
@@ -7,9 +9,15 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SocialIconsComponent implements OnInit {
 	@Input() size: string = 'medium';
+	socialLinks: SocialLink[];
 
-    constructor() { }
+    constructor(private appService: AppService) { }
 
-    ngOnInit() {}
+    ngOnInit() {
+    	this.appService.context.subscribe((context) => {
+    		console.log(context);
+    		this.socialLinks = context.social_links
+    	});
+    }
 
 }
