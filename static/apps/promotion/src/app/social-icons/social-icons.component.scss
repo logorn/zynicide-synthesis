@@ -1,12 +1,13 @@
 @import "./../../theme.scss";
 
 .SocialIcons {
+	display: inline-block;
+	margin: -0.75rem;
 	.SocialIcons_icon {
-		display: inline;
 		font-size: inherit;
+		padding: 0.75rem;
 	}
 	.SocialIcons_link {
-		margin: 0 0.75rem;
 		@include hoverText($brand-link);
 	}
 }
