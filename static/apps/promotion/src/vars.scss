@@ -45,7 +45,7 @@ $z-index-10: 10000;
     Define font sizes
 */
 
-$base-font-size: 14px;
+$base-font-size: 16px;
 
 $tiny-font: 0.667rem;
 $small-font: 0.75rem;
@@ -69,13 +69,17 @@ $bold-font-weight: 900;
 /*
 	Define paddings
  */
+
+$side-padding: 50px;
+$mobile-side-padding: 30px;
+
 $padding-1: 50px;
 $padding-2: 90px;
 $padding-3: 125px;
 
-$mobile-padding-1: 30px;
-$mobile-padding-2: 54px;
-$mobile-padding-3: 75px;
+$mobile-padding-1: $padding-1 * 0.6;
+$mobile-padding-2: $padding-2 * 0.6;
+$mobile-padding-3: $padding-3 * 0.6;
 
 
 /*

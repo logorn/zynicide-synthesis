@@ -1,0 +1,12 @@
+<div class="SocialIcons"
+	[ngClass]="{'SocialIcons--large': size == 'large', 'SocialIcons--medium': size == 'medium', 'SocialIcons--small': size == 'small'}"
+>
+	<a class="SocialIcons_link" href="socialLink.url" target="_blank" rel="noopener noreferrer"
+		*ngFor="let socialLink of socialLinks"
+	>
+		<i class="SocialIcons_icon fa" aria-hidden="true"
+			*ngIf="socialLink.icon_source == 'font-awesome'"
+			[ngClass]="socialLink.icon_data"
+		></i>
+	</a>
+</div>

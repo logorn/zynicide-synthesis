@@ -112,7 +112,7 @@
 */
 
 @mixin shadow() {
-    box-shadow: 0 2px 2px $gray-darker;
+    box-shadow: 3px 5px 10px $gray-darker;
 }
 
 @mixin softShadow($color) {
@@ -209,7 +209,7 @@ h6, p, li, td, button {
     }
 }
 p {
-    line-height: 1.79rem;
+    line-height: 2rem;
     small {
         line-height: 2.25rem;
     }
@@ -229,21 +229,21 @@ h6 {
 
 section {
     &.Section--smHeight {
-        padding: $mobile-padding-1;
+        padding: $mobile-padding-1 $mobile-side-padding;
         @include for-tablet-landscape-up {
-            padding: $padding-1;
+            padding: $padding-1 $side-padding;
         }
     }
     &.Section--mdHeight {
-        padding: $mobile-padding-2 $mobile-padding-1;
+        padding: $mobile-padding-2 $mobile-side-padding;
         @include for-tablet-landscape-up {
-            padding: $padding-2 $padding-1;
+            padding: $padding-2 $side-padding;
         }
     }
     &.Section--lgHeight {
-        padding: $mobile-padding-3 $mobile-padding-1;
+        padding: $mobile-padding-3 $mobile-side-padding;
         @include for-tablet-landscape-up {
-            padding: $padding-3 $padding-1;
+            padding: $padding-3 $side-padding;
         }
     }
     &.Section--light {
@@ -354,4 +354,14 @@ hr {
         @include softShadow($gray);
         @include smoothTransition(0.25s);
     }
+}
+
+
+/*
+    Define typed.js stylings
+ */
+
+.typed-cursor {
+    font-size: inherit;
+    color: inherit;
 }

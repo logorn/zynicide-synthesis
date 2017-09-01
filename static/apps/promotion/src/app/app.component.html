@@ -1,15 +1,14 @@
 <app-chemical-solution class="HeaderChemicalSolution">
 	<div class="Header">
 		<div class="Header_topRow">
-			<div class="ServiceList">
-				<h4 class="ServiceList_service">Web Development</h4>
-				<h4 class="ServiceList_service">Data Science</h4>
-				<h4 class="ServiceList_service">UX/UI Design</h4>
+			<div class="WhatIAm">
+				<div id="what-i-am"></div>
 			</div>
-			<div class="Header_hireUs">
-				<button class="Button Button--brandSecondary">Hire Us</button>
+			<div class="Header_hireMe">
+				<button class="Button Button--brandSecondary">Hire Me</button>
 			</div>
 		</div>
+
 		<svg class="Header_logo" width="158px" height="143px" viewBox="0 0 158 143" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 		    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 		        <g transform="translate(-433.000000, -189.000000)" fill="#FFFFFF">
@@ -20,64 +19,44 @@
 		                    </text>
 		                    <path d="M103.07619,129.434343 L103.07619,139.217172 L39.9656867,139.217172 C39.5467579,139.217172 39.0408665,138.921953 38.837887,138.561582 L0.369261994,70.2641756 C0.165324226,69.9021034 0.166282445,69.3133671 0.369261994,68.9529961 L38.837887,0.655589755 C39.0418247,0.293517531 39.543075,0 39.9656867,0 L117.655432,0 C118.074361,0 118.581859,0.29521876 118.7868,0.655589755 L157.62717,68.9529961 C157.833078,69.3150683 157.832111,69.9038046 157.62717,70.2641756 L128.689974,121.147713 L120.54548,117.00554 L147.499874,69.6085859 L113.477286,9.78282828 L45.6756117,9.78282828 L11.9786567,69.6085859 L45.6756117,129.434343 L103.07619,129.434343 Z" id="Combined-Shape"></path>
 		                    <text font-family="Ubuntu-Medium, Ubuntu" font-size="37.5" font-weight="400">
-		                        <tspan x="108.050298" y="141.858586">s</tspan>
+		                        <tspan x="106.781548" y="141.858586">t</tspan>
 		                    </text>
 		                </g>
 		            </g>
 		        </g>
 		    </g>
 		</svg>
-		<h1 class="Header_zynicideSynthesis">Zynicide Synthesis</h1>
+		<h1 class="Header_zynicideSynthesis">Zackarey Thoutt</h1>
 	</div>
 </app-chemical-solution>
 <section class="Intro Section--mdHeight Section--white">
-	<p class="Intro_info">Zynicide Synthesis is a design agency run by people who love building beautiful websites and solving unique problems. We would love to help you create a fresh look and feel for your business and solve any technical challenges that you face.</p>
-	<h6 class="Intro_cta"><a href="" class="header-link">Let's Work Together</a></h6>
+	<img alt="Profile Picture" class="Intro_profilePic"
+		[src]="context.profile.profile_pic"
+	>
+	<p class="Intro_info">I'm a full-stack software engineer who loves data science and building single-page web apps. When I'm not at my computer I travel the world and hike as much as I can. While I'm off on adventures I like to capture the beautiful things I see in photographs. I live in Boulder, Colorado with my amazing wife, Shelby, and crazy border collie, Skutull.</p>
+	<app-social-icons
+		[size]="'large'"
+	></app-social-icons>
 </section>
-<section class="RecentWork Section--smHeight Section--gray">
-	<div class="RecentWork_showcase">
-		<h6 class="RecentWork_title muted-text uppercase-text">Recent Work</h6>
-		<div class="Showcase">
-			<div class="Showcase_item">
-
-			</div>
-			<div class="Showcase_item">
-
-			</div>
-			<div class="Showcase_item">
-
-			</div>
-		</div>
-	</div>
-</section>
+<app-featured-projects></app-featured-projects>
 <section class="Section--lgHeight">
-	<div class="Review">
-		<img class="Review_image" src="/static/apps/promotion/src/assets/the-escapes-artist.jpg" alt="The Escapes Artist">
-		<div class="Review_info">
-			<h4 class="Review_reviewer"><strong class="uppercase-text">Shelby</strong> of <span class="uppercase-text">The Escapes Artist</span></h4>
-			<p class="Review_text italic-text">“The unique design is exactly what I was looking for. The website allows me to write blog posts, create trips, and much more. Exactly what I needed!”</p>
-		</div>
-	</div>
-</section>
-<hr class="divider--dotted">
-<section class="Section--lgHeight">
-	<div class="WhatWeOffer">
-		<h6 class="WhatWeOffer_title muted-text uppercase-text">Recent Work</h6>
-		<div class="WhatWeOffer_rowOne">
+	<div class="Freelancing">
+		<h6 class="Freelancing_title muted-text uppercase-text"><span>I Freelance on the Side</span></h6>
+		<div class="Freelancing_rowOne">
 			<div class="Offering">
-				<h4 class="Offering_title">Development</h4>
-				<p class="Offering_description">Businesses need a fast, reliable website that can scale as their business grows. We build websites using the latest technology and sticking to best practices to give our clients a competetive edge over the competition.</p>
+				<h4 class="Offering_title">Website Development</h4>
+				<p class="Offering_description">Businesses need a fast, reliable website that can scale as their business grows. I build websites using the latest technology and sticking to best practices to give my clients a competetive edge over the competition.</p>
 			</div>
 			<div class="Offering">
-				<h4 class="Offering_title">Branding</h4>
-				<p class="Offering_description">A unique, thoughtful design sets businesses apart from their competition. At Zynicide Synthesis, we work to create a seemless design across your brand—from website to stationary.</p>
+				<h4 class="Offering_title">UX/UI Design</h4>
+				<p class="Offering_description">A unique, thoughtful design sets businesses apart from their competition. I work with my clients to create a seemless, user-friendly design across their brand—from website to stationary.</p>
 			</div>
 			<div class="Offering">
-				<h4 class="Offering_title">Data Science</h4>
-				<p class="Offering_description">Understanding how your customers use your website and interact with your products online is essentail to success. We can help you understand who your customers are and why they are hiring your business.</p>
+				<h4 class="Offering_title">AI/Machine Learning</h4>
+				<p class="Offering_description">I'm a data scientist with experience solving complex problems using deep learning and other machine learning algorithms. I can help businesses create and deploy AI that improves their efficiency and bottom line.</p>
 			</div>
 		</div>
-		<div class="WhatWeOffer_rowTwo">
+		<div class="Freelancing_rowTwo">
 			<div class="Offering">
 				<h4 class="Offering_title">Responsive Design</h4>
 				<p class="Offering_description">When creating a website, there are few things as important as a responsive design that works on any device and any browser. We have the expertise and take the time to perfect every pixel on every device.</p>
@@ -86,23 +65,23 @@
 		</div>
 	</div>
 </section>
-<section class="Section--lgHeight Section--dark">
-	<div class="Philosophy">
-		<div class="Offering">
-			<h4 class="Offering_title">Best Practices</h4>
-			<p class="Offering_description">At Zynicide Synthesis, we take pride in keeping up with the latest technology and best practices. Our code is maintainable and extensible so that adding new features in the future is a breeze.</p>
-		</div>
+<section class="Section--mdHeight Section--dark">
+	<div class="InterestingFacts">
+		<h2 class="InterestingFacts_title">Interesting Facts</h2>
+		<p class="InterestingFacts_item">I created the <a class="text-link" href="https://github.com/zackthoutt/got-book-6">Game of Thrones AI</a> that went viral</p>
+		<p class="InterestingFacts_item">I worked at <a href="https://en.wikipedia.org/wiki/Mocavo" class="text-link">Mocavo</a>, which was acquired in the largest Techstars exit to date</p>
+		<p class="InterestingFacts_item">I graduated from CU Engineering with a <strong>4.0 GPA</strong></p>
+		<p class="InterestingFacts_item">I'm married to the most <strong>amazing girl</strong> in the world</p>
+		<p class="InterestingFacts_item">I've traveled to <strong>42</strong> US states and <strong>16</strong> countries on <strong>3</strong> continents</p>
+		<p class="InterestingFacts_item">I've climbed <strong>28</strong> of Colorado's 56 14ers</p>
+		<p class="InterestingFacts_item">My signature recipe is called <strong>"Drunken Trout Pot Pie"</strong></p>
+		<p class="InterestingFacts_item">I taught my <strong>dog</strong> how to bring me beers and recycle the empties</p>
+		<p class="InterestingFacts_item">I'm at least a <strong>4th generation Colroadan</strong> on all sides of my family</p>
+		<p class="InterestingFacts_item">My <strong>family</strong> the most important thing in my life</p>
+		<p class="InterestingFacts_item">I do <strong>yoga</strong> +3 times per week</p>
 	</div>
 </section>
-<section class="Section--mdHeight">
-	<div class="LetsSynthesize">
-		<img src="/static/apps/promotion/src/assets/cylinder.png" alt="Graduated Cylinder" class="LetsSynthesize_cylinder">
-		<div class="LetsSynthesize_cta">
-			<h6 class="LetsSynthesize_title"><a href="" class="header-link">Let's Synthesize Something Together</a></h6>
-			<p class="LetsSynthesize_description">If you think that we might be a good match, send us a message. We’d love to talk with you about your needs and dreams.</p>
-		</div>
-	</div>
-</section>
+<app-work-together></app-work-together>
 <footer class="Footer">
 	<div class="FooterBar">
 		<img class="FooterBar_left" src="/static/apps/promotion/src/assets/footer-bar.svg" alt="Footer Bar">
@@ -111,18 +90,20 @@
 	</div>
 	<div class="Footer_info">
 		<div class="Footer_about">
-			<h6 class="Footer_title">Zynicide Synthesis</h6>
-			<p class="Footer_paragraph">Zynicide Synthesis is a web design and development agency focused on creating unique, feature-rich websites</p>
+			<h6 class="Footer_title">Zackarey Thoutt</h6>
+			<p class="Footer_paragraph">I'm a full-stack software engineer who loves data science and building single-page web apps. I live in Boulder, Colorado with my amazing wife, Shelby, and crazy border collie, Skutull.</p>
 		</div>
 		<div class="Footer_contact">
 			<h6 class="Footer_title">Contact</h6>
-			<p class="Footer_paragraph">303-503-3404</p>
-			<p class="Footer_paragraph">zackarey.thoutt@colorado.edu</p>
+			<app-social-icons
+				[size]="'medium'"
+				[requiredImportance]="3"
+			></app-social-icons>
 		</div>
 	</div>
 	<hr class="divider--dotted">
 	<div class="Footer_copy">
-		<h6 class="Footer_copyTitle">Site by Zynicide Synthesis</h6>
+		<h6 class="Footer_copyTitle">Site by Zack Thoutt</h6>
 		<h6 class="Footer_copyTitle">Copyright 2017</h6>
 	</div>
 </footer>

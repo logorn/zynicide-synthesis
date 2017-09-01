@@ -34,125 +34,61 @@
 	}
 }
 
-.ServiceList {
-	color: $white;
+.WhatIAm {
 	margin: 0 auto 0 0;
-	.ServiceList_service {
-		color: inherit;
-	}
+	display: flex;
+	color: $white;
+	font-size: 37px;
+}
+#what-i-am {
+	color: inherit;
+	@include sub-header();
 }
 
 .Intro {
+	text-align: center;
+	.Intro_profilePic {
+		border-radius: 50%;
+		margin: 0 auto 2rem auto;
+		display: block;
+		width: 200px;
+		height: 200px;
+	}
 	.Intro_info {
 		width: 100%;
-		max-width: 700px;
-		margin: 0 auto;
-	}
-	.Intro_cta {
+		max-width: 800px;
+		margin: 2rem auto;
 		text-align: center;
-		margin-top: 2.5rem;
 	}
 }
 
-.RecentWork {
-	.RecentWork_title {
-		margin-bottom: 1rem;
-		text-align: center;
-		@include for-tablet-landscape-up {
-			text-align: left;
-		}
-	}
-	.RecentWork_showcase {
-		width: 100%;
-		max-width: 900px;
-		margin: 0 auto;
-	}
-}
-
-.Showcase {
-	display: block;
-	width: 100%;
-	@include for-tablet-landscape-up {
-		display: flex;
-		justify-content: space-between;
-	}
-	.Showcase_item {
-		height: 275px;
-		width: 275px;
-		@include softShadow($gray-darker);
-		background-color: $brand-secondary-light;
-		border-radius: $border-radius;
-		margin: 0 auto 2rem auto;
-		@include for-tablet-landscape-up {
-			margin: 0;
-		}
-	}
-}
-
-.Review {
-	padding: 1.5rem 0;
-	border-top: 2px dashed $brand-primary;
-	border-bottom: 2px dashed $brand-primary;
-	width: 100%;
-	margin: 0 auto;
-	display: block;
-	@include for-tablet-landscape-up {
-		width: 600px;
-		display: flex;
-		padding: 1rem 0;
-	}
-	.Review_image {
-		@include for-tablet-landscape-up {
-			height: 150px;
-			width: 150px;
-			flex-basis: 150px;
-		}
-		height: 300px;
-		width: 300px;
-		flex-basis: 300px;
-		border-radius: 50%;
-		display: block;
-		margin: 0 auto;
-	}
-	.Review_info {
-		@include for-tablet-landscape-up {
-			padding: 0 0 0 1.5rem;
-		}
-	}
-	.Review_reviewer {
-		margin-bottom: 0.5rem;
-		margin-top: 1.5rem;
-		@include for-tablet-landscape-up {
-			margin-top: 0;
-			margin-bottom: 0.5rem;
-		}
-	}
-	.Review_text {
-		line-height: 2rem;
-	}
-}
-
-.WhatWeOffer {
-	.WhatWeOffer_title {
+.Freelancing {
+	.Freelancing_title {
 		text-align: left;
-		@include for-tablet-landscape-up {
-			text-align: center;
+		width: 100%;
+		max-width: 1100px;
+		margin: 0 auto;
+		span {
+			margin: 0;
+			@include for-tablet-landscape-up {
+				margin: 0 1rem;
+			}
 		}
 	}
-	.WhatWeOffer_rowOne {
+	.Freelancing_rowOne {
 		display: block;
 		width: 100%;
-		max-width: 1000px;
+		max-width: 1100px;
 		@include for-tablet-landscape-up {
 			display: flex;
 			justify-content: space-between;
 			margin: 2rem auto;
 		}
 	}
-	.WhatWeOffer_rowTwo {
+	.Freelancing_rowTwo {
 		display: block;
 		width: 100%;
-		max-width: 900px;
+		max-width: 1000px;
 		@include for-tablet-landscape-up {
 			display: flex;
 			justify-content: space-around;
@@ -165,8 +101,8 @@
 	width: 100%;
 	margin: 2rem 0;
 	@include for-tablet-landscape-up {
-		max-width: 275px;
-		margin: 0;
+		max-width: 350px;
+		margin: 0 1rem;
 	}
 	.Offering_title {
 		margin: 0 0 2rem 0;
@@ -182,38 +118,13 @@
 	}
 }
 
-.Philosophy {
+.InterestingFacts {
 	color: $white;
 	width: 100%;
 	max-width: 900px;
 	margin: 0 auto;
-}
-
-.LetsSynthesize {
-	width: 100%;
-	margin: 0 auto;
-	@include for-tablet-landscape-up {
-		display: flex;
-		max-width: 500px;
-	}
-	.LetsSynthesize_cylinder {
-		width: 30px;
-		height: 35px;
-		margin: 2rem auto;
-		display: block;
-		@include for-tablet-landscape-up {
-			flex-basis: 30px;
-			align-self: flex-start;
-			margin: 0.4rem 0 0 0;
-		}
-	}
-	.LetsSynthesize_cta {
-		@include for-tablet-landscape-up {
-			padding: 0 0 0 1.5rem;
-		}
-	}
-	.LetsSynthesize_title {
-		margin: 0 0 1.5rem 0;
+	.InterestingFacts_item, .InterestingFacts_title {
+		margin: 2rem 0;
 	}
 }
 
