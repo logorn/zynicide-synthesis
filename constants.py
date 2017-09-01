@@ -32,42 +32,42 @@ SOCIAL_LINKS = [
 	{
 		'site': 'twitter',
 		'url': 'https://twitter.com/zthoutt',
-		'importance': 1,
+		'importance': 2,
 		'icon_source': 'font-awesome',
 		'icon_data': 'fa-twitter'
 	},
 	{
 		'site': 'medium',
 		'url': 'https://medium.com/@zthoutt',
-		'importance': 1,
+		'importance': 2,
 		'icon_source': 'font-awesome',
 		'icon_data': 'fa-medium'
 	},
 	{
 		'site': 'reddit',
 		'url': 'https://www.reddit.com/user/zthoutt/',
-		'importance': 1,
+		'importance': 3,
 		'icon_source': 'font-awesome',
 		'icon_data': 'fa-reddit'
 	},
 	{
 		'site': 'hacker_news',
 		'url': 'https://news.ycombinator.com/submitted?id=zthoutt',
-		'importance': 1,
+		'importance': 2,
 		'icon_source': 'font-awesome',
 		'icon_data': 'fa-hacker-news'
 	},
 	{
 		'site': 'quora',
 		'url': 'https://www.quora.com/profile/Zack-Thoutt',
-		'importance': 1,
+		'importance': 3,
 		'icon_source': 'font-awesome',
 		'icon_data': 'fa-quora'
 	},
 	{
 		'site': '500px',
 		'url': 'https://500px.com/zthoutt',
-		'importance': 1,
+		'importance': 3,
 		'icon_source': 'font-awesome',
 		'icon_data': 'fa-500px'
 	}
